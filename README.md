@@ -19,7 +19,7 @@ And then execute:
 Use it in your tests:
 
 <pre>
-class FeatureTest < Test::Unit::TestCase
+class FeatureTest &lt; Test::Unit::TestCase
   def around
     # Before the test runs
 
@@ -37,7 +37,7 @@ end
 You can as well use around as a class method:
 
 <pre>
-class FeatureTest < Test::Unit::TestCase
+class FeatureTest &lt; Test::Unit::TestCase
   around do |test|
     # Before the test runs
 
