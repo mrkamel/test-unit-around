@@ -21,17 +21,13 @@ module Test
 
           def run_with_around(result, &block)
             if respond_to?(:around)
-              name = method_name
-
-              orig = :"orig_#{name}"
+              orig = :"orig_#{method_name}"
 
               unless respond_to?(orig)
                 singleton = class << self; self; end
 
-                singleton.send :alias_method, orig, name
-
-                singleton.send :define_method, name do
-                  around { send orig }
+                singleton.send :define_method, method_name do
+                  around { super }
                 end
               end
             end
@@ -48,6 +44,9 @@ module Test
 end
 
 if defined?(ActiveSupport::TestCase)
+  # ActiveSupport::TestCase itself already overwrites run.
+  # Thus, we need to redefine run there as well.
+
   ActiveSupport::TestCase.send :include, Test::Unit::Around
 end
 
