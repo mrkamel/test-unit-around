@@ -27,7 +27,7 @@ module Test
                 singleton = class << self; self; end
 
                 singleton.send :define_method, method_name do
-                  around { super }
+                  around { super() }
                 end
               end
             end
