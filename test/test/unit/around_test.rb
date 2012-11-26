@@ -15,7 +15,7 @@ class AroundClassMethodTest < Test::Unit::TestCase
 
   def test_around
     assert_equal :before, @before
-    assert_not_equal :after, @after
+    assert_nil @after
   end
 end
 
@@ -32,12 +32,13 @@ class AroundInstanceMethodTest < Test::Unit::TestCase
 
   def test_around
     assert_equal :before, @before
-    assert_not_equal :after, @after
+    assert_nil @after
   end
 end
 
 class WithoutAroundTest < Test::Unit::TestCase
   def test_something
+    assert_nil @after
     assert_equal 1, 1
   end
 end
