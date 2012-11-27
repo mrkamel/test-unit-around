@@ -32,7 +32,7 @@ $ gem install test-unit-around
 Use it in your tests:
 
 ```ruby
-class FeatureTest &lt; Test::Unit::TestCase
+class FeatureTest < Test::Unit::TestCase
   def around
     # Before the test runs
 
@@ -50,7 +50,7 @@ end
 You can as well use around as a class method:
 
 ```ruby
-class FeatureTest &lt; Test::Unit::TestCase
+class FeatureTest < Test::Unit::TestCase
   around do |test|
     # Before the test runs
 
