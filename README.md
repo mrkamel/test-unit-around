@@ -1,24 +1,29 @@
+
 # Test::Unit::Around
 
 Use an around filter instead or in addition to test/unit's setup and teardown methods.
+This is imho especially useful in combination with context blocks provided by e.g.,
+the test-unit-context gem to avoid duplicate code.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    group :test do
-      gem 'test-unit-around'
-    end
+```ruby
+group :test do
+  gem 'test-unit-around'
+end
+```
 
 And then execute:
 
-    $ bundle
+`$ bundle`
 
 ## Usage
 
 Use it in your tests:
 
-<pre>
+```ruby
 class FeatureTest &lt; Test::Unit::TestCase
   def around
     # Before the test runs
@@ -32,11 +37,11 @@ class FeatureTest &lt; Test::Unit::TestCase
     # The test itself
   end
 end
-</pre>
+```
 
 You can as well use around as a class method:
 
-<pre>
+```ruby
 class FeatureTest &lt; Test::Unit::TestCase
   around do |test|
     # Before the test runs
@@ -46,9 +51,11 @@ class FeatureTest &lt; Test::Unit::TestCase
     # After the test has run
   end
 
-  ...
+  test "feature" do
+    # The test itself
+  end
 end
-</pre>
+```
 
 ## Contributing
 
