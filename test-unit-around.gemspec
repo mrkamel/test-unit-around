@@ -17,6 +17,6 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_development_dependency "rake"
-  s.add_dependency 'test-unit', '>= 2.4.0'
+  s.add_dependency 'test-unit', '>= 2.4.4'
 end
 
