@@ -7,7 +7,7 @@ Use an around filter instead or in addition to test/unit's setup and teardown me
 Add this line to your application's Gemfile:
 
     group :test do
-      gem 'test-unit-around', :git => "git://github.com/mrkamel/test-unit-around.git"
+      gem 'test-unit-around'
     end
 
 And then execute:

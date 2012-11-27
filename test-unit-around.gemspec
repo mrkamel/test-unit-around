@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = Test::Unit::Around::VERSION
   s.authors     = ["Benjamin Vetter"]
   s.email       = ["vetter@flakks.com"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/mrkamel/test-unit-around"
   s.summary     = %q{Use around instead or in combination with test/unit's setup and teardown methods}
   s.description = %q{Use around instead or in combination with test/unit's setup and teardown methods}
 
