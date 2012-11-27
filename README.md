@@ -17,7 +17,15 @@ end
 
 And then execute:
 
-`$ bundle`
+```
+$ bundle
+```
+
+Alternatively, you can of course install it without bundler via:
+
+```
+$ gem install test-unit-around
+```
 
 ## Usage
 
