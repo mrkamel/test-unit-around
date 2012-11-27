@@ -34,16 +34,18 @@ Use it in your tests:
 ```ruby
 class FeatureTest < Test::Unit::TestCase
   def around
-    # Before the test runs
+    # Before a test runs
 
     yield
 
-    # After the test has run
+    # After a test has run
   end
 
   def test_feature
-    # The test itself
+    # First test
   end
+
+  ...
 end
 ```
 
@@ -52,16 +54,18 @@ You can as well use around as a class method:
 ```ruby
 class FeatureTest < Test::Unit::TestCase
   around do |test|
-    # Before the test runs
+    # Before a test runs
 
     test.run
 
-    # After the test has run
+    # After a test has run
   end
 
   test "feature" do
-    # The test itself
+    # First test
   end
+
+  ...
 end
 ```
 
